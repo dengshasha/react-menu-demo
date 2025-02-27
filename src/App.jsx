@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router'
-import './App.css'
 import MenuDetail from './components/MenuDetail'
 import Navbar from './components/Navbar'
 
