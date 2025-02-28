@@ -30,9 +30,14 @@ jobs:
       - name: Build
         run: | 
           npm run build
+
+      - name: Check build output
+        run: ls -la ./dist
                          
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./dist
+          force_orphan: true 
